@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int guestCount = 0;
-int maxGuest = 100;
+#define MAX_GUEST 100
 
 struct Guest
 {
@@ -12,8 +11,11 @@ struct Guest
     float otherExpenses;
 };
 
+struct Guest guests[MAX_GUEST];
+int guestCount = 0;
+
 void addGuest() {
-    if (guestCount >= maxGuest) {
+    if (guestCount >= MAX_GUEST) {
         printf("Maximum Guest Limit Reached!\n");
     }
     
@@ -27,10 +29,11 @@ void addGuest() {
     scanf("%f", &g1.foodCharge);
     printf("Enter Other Expenses: ");
     scanf("%f", &g1.otherExpenses);
+    guests[guestCount++] = g1;
     printf("Guest Recoed is added\n");
 }
 
 int main () {
-    
+
     return 0;
 }
