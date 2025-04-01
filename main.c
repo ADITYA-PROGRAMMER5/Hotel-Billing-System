@@ -51,7 +51,22 @@ void showGuest() {
         float totalexpense = guests[i].roomCharge + guests[i].foodCharge + guests[i].otherExpenses;
         printf("\n%d\t\t%s\t\t%.2f\t\t\t%.2f\t\t\t%.2f\t\t\t%.2f\n\n", guests[i].id, guests[i].name, guests[i].roomCharge, guests[i].foodCharge, guests[i].otherExpenses, totalexpense);
     }
+}
+
+void updateGuest() {
+    int id;
+    printf("Enter Guest ID to update: ");
+    scanf("%d", id);
+    if (id < 1 || id > guestCount)
+    {
+        printf("Invalid Id Please Enter valid id\n");
+    }
     
+}
+
+
+void deleteGuest() {
+
 }
 
 int main() {
