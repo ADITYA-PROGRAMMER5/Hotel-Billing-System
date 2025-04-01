@@ -55,6 +55,13 @@ void showGuest() {
 }
 
 int main() {
-   
+    int choice;
+    while (1) {
+        printf("\nHotel Billing System\n");
+        printf("1. Add Guest\n2. View Guests\n3. Update Guest\n4. Delete Guest\n5. Exit\n");
+        printf("Enter your choice: ");
+        scanf(" %d", &choice);
+
+    }
     return 0;
 }
