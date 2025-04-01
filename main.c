@@ -62,6 +62,21 @@ int main() {
         printf("Enter your choice: ");
         scanf(" %d", &choice);
 
+        switch (choice)
+        {
+        case 1:
+            addGuest();
+            break;
+        
+        case 2:
+            showGuest();
+            break;
+        
+        default:
+            printf("Invalid choice plrase choice a vallid option & try again\n");
+            break;
+        }
+
     }
     return 0;
 }
