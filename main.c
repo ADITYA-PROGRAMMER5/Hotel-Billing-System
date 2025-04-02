@@ -56,12 +56,21 @@ void showGuest() {
 void updateGuest() {
     int id;
     printf("Enter Guest ID to update: ");
-    scanf("%d", id);
+    scanf("%d", &id);
     if (id < 1 || id > guestCount)
     {
         printf("Invalid Id Please Enter valid id\n");
+        return;
     }
-    
+    struct Guest *g = &guests[id - 1];
+    printf("Updating record for %s (ID: %d)\n", g->name, g->id);
+    printf("Enter new room charge: ");
+    scanf(" %f", &g->roomCharge);
+    printf("Enter new food expense: ");
+    scanf(" %f", &g->foodCharge);
+    printf("Enter new other expenses: ");
+    scanf(" %f", &g->otherExpenses);
+    printf("\nRecord updated successfully!\n");
 }
 
 
