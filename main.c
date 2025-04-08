@@ -95,6 +95,10 @@ int main() {
         case 2:
             showGuest();
             break;
+
+        case 3:
+            updateGuest();
+            break;
         
         default:
             printf("Invalid choice plrase choice a vallid option & try again\n");
