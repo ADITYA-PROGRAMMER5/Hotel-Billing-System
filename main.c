@@ -75,7 +75,18 @@ void updateGuest() {
 
 
 void deleteGuest() {
-
+        int id;
+        printf("Enter Guest ID to delete: ");
+        scanf(" %d", &id);
+        if (id < 1 || id > guestCount) {
+            printf("Invalid ID!\n");
+            return;
+        }
+        for (int i = id - 1; i < guestCount - 1; i++) {
+            guests[i] = guests[i + 1];
+        }
+        guestCount--;
+        printf("\nGuest record deleted successfully!\n");
 }
 
 int main() {
@@ -98,6 +109,10 @@ int main() {
 
         case 3:
             updateGuest();
+            break;
+
+        case 4:
+            deleteGuest();
             break;
         
         default:
