@@ -114,6 +114,10 @@ int main() {
         case 4:
             deleteGuest();
             break;
+
+        case 5:
+            printf("Exiting Program.....");
+            exit(0);
         
         default:
             printf("Invalid choice plrase choice a vallid option & try again\n");
