@@ -16,12 +16,14 @@ struct Guest
 struct Guest guests[MAX_GUEST];
 int guestCount = 0;
 
-void addGuest() {
-    if (guestCount >= MAX_GUEST) {
+void addGuest()
+{
+    if (guestCount >= MAX_GUEST)
+    {
         printf("Maximum Guest Limit Reached!\n");
         return;
     }
-    
+
     struct Guest g1;
     g1.id = guestCount + 1;
     printf("Enter Guest Name: ");
@@ -36,7 +38,8 @@ void addGuest() {
     printf("Guest Recoed is added\n");
 }
 
-void showGuest() {
+void showGuest()
+{
     if (guestCount == 0)
     {
         printf("\nNo Guest record found\n");
@@ -45,7 +48,7 @@ void showGuest() {
 
     printf("\nID:\t\tName:\t\tRoom Charges\t\tFood Charges\t\tOther Expenses\t\tTotal Expenses\n");
     printf("----------------------------------------------------------------------------------------------------------------------");
-    
+
     for (int i = 0; i < guestCount; i++)
     {
         float totalexpense = guests[i].roomCharge + guests[i].foodCharge + guests[i].otherExpenses;
@@ -53,7 +56,8 @@ void showGuest() {
     }
 }
 
-void updateGuest() {
+void updateGuest()
+{
     int id;
     printf("Enter Guest ID to update: ");
     scanf("%d", &id);
@@ -73,25 +77,29 @@ void updateGuest() {
     printf("\nRecord updated successfully!\n");
 }
 
-
-void deleteGuest() {
-        int id;
-        printf("Enter Guest ID to delete: ");
-        scanf(" %d", &id);
-        if (id < 1 || id > guestCount) {
-            printf("Invalid ID!\n");
-            return;
-        }
-        for (int i = id - 1; i < guestCount - 1; i++) {
-            guests[i] = guests[i + 1];
-        }
-        guestCount--;
-        printf("\nGuest record deleted successfully!\n");
+void deleteGuest()
+{
+    int id;
+    printf("Enter Guest ID to delete: ");
+    scanf(" %d", &id);
+    if (id < 1 || id > guestCount)
+    {
+        printf("Invalid ID!\n");
+        return;
+    }
+    for (int i = id - 1; i < guestCount - 1; i++)
+    {
+        guests[i] = guests[i + 1];
+    }
+    guestCount--;
+    printf("\nGuest record deleted successfully!\n");
 }
 
-int main() {
+int main()
+{
     int choice;
-    while (1) {
+    while (1)
+    {
         printf("\nHotel Billing System\n");
         printf("1. Add Guest\n2. View Guests\n3. Update Guest\n4. Delete Guest\n5. Exit\n");
         printf("Enter your choice: ");
@@ -102,7 +110,7 @@ int main() {
         case 1:
             addGuest();
             break;
-        
+
         case 2:
             showGuest();
             break;
@@ -118,12 +126,11 @@ int main() {
         case 5:
             printf("Exiting Program.....");
             exit(0);
-        
+
         default:
             printf("Invalid choice plrase choice a vallid option & try again\n");
             break;
         }
-
     }
     return 0;
 }
