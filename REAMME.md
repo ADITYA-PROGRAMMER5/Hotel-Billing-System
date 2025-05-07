@@ -32,3 +32,13 @@ gcc hotel_billing.c -o hotel_billing
 ./hotel_billing
 ```
 
+## 🧾 Sample Menu
+
+1. Add Guest
+2. View Guests
+3. Update Guest
+4. Delete Guest
+5. Exit
+
+---
+
