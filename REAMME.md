@@ -52,3 +52,14 @@ gcc hotel_billing.c -o hotel_billing
 
 ---
 
+## 💡 Suggestions for Improvement
+
+1. Use fgets() for safer string input
+
+2. Add file-based persistence (save/load records)
+
+3. Implement search and sort features
+
+4. Support dynamic memory allocation for scalability
+
+---
