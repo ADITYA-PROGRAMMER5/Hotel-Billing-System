@@ -19,3 +19,11 @@ This is a simple C-based **Hotel Billing System** designed to manage guest billi
 
 ---
 
+## ⚙️ How to Compile
+
+```bash
+gcc hotel_billing.c -o hotel_billing
+```
+
+---
+
