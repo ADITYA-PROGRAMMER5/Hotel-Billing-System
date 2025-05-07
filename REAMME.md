@@ -14,3 +14,8 @@ This is a simple C-based **Hotel Billing System** designed to manage guest billi
 
 ---
 
+## 📁 Files
+- `hotel_billing.c` - Main C source file
+
+---
+
