@@ -27,3 +27,8 @@ gcc hotel_billing.c -o hotel_billing
 
 ---
 
+## 🚀 How to Run
+```bash
+./hotel_billing
+```
+
