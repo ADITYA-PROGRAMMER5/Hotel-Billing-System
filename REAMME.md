@@ -42,3 +42,13 @@ gcc hotel_billing.c -o hotel_billing
 
 ---
 
+##⚠️ Limitations
+
+1. Maximum of 100 guest records (#define MAX_GUEST 100)
+
+2. Data is stored in memory only (lost after program exit)
+
+3. Uses scanf("%s", ...) which may cause buffer overflow for long names
+
+---
+
